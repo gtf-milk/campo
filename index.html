@@ -6,6 +6,14 @@
 <title>Caderno de Campo GTF Milk</title>
 <meta name="description" content="Caderno de campo da GTF Milk: rotação das novilhas nos piquetes, tratamentos, aplicações e carência.">
 <meta name="theme-color" content="#1E3A2B">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Caderno de Campo GTF Milk">
+<meta property="og:description" content="Rotação das novilhas, tratamentos e aplicações nos 14 piquetes da GTF Milk.">
+<meta property="og:url" content="https://gtf-milk.github.io/campo/">
+<meta property="og:image" content="https://gtf-milk.github.io/campo/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
@@ -27,7 +35,7 @@ html{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset
 body{margin:0}
 img{max-width:100%}
 [hidden]{display:none!important}
-.gate{position:fixed;inset:0;z-index:90;background:var(--brand);color:var(--on-brand);overflow:auto;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.gate{position:fixed;inset:0;z-index:90;background:linear-gradient(160deg,#21402F,#13251A 60%,#0F2116);color:var(--on-brand);overflow:auto;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 .gate-in{max-width:420px;margin:0 auto;padding-block:40px 32px;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px));display:grid;gap:16px}
 .gate h1{font-size:34px;font-weight:700}
 .gate .sub{margin:4px 0 0;color:var(--on-brand-2)}
@@ -41,6 +49,13 @@ img{max-width:100%}
 .gate .selsum{background:rgb(255 255 255 / .12);color:var(--on-brand)}
 .gate-note{padding:14px;border-radius:12px;background:rgb(255 255 255 / .08)}
 .mark.big{width:64px;height:64px;font-size:20px;border-radius:18px}
+
+.gate::before{content:"";position:fixed;inset:0;background:url(contours.svg) center/cover no-repeat;pointer-events:none}
+.gate-in{position:relative}
+.hero{margin:-12px -4px 0;filter:drop-shadow(0 12px 18px rgb(0 0 0 / .4))}
+.hero svg{display:block;width:100%;height:auto;max-height:34vh}
+.gate .eyb{margin:0 0 6px;font-family:var(--f-head);font-weight:600;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2)}
+.gate h1{font-size:40px;line-height:1}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -323,7 +338,7 @@ textarea.inp{min-height:84px;resize:vertical}
 </style>
 </head>
 <body>
-<section class="gate" id="gate"><div class="gate-in"><div class="mark big" aria-hidden="true">GTF</div><p>Carregando…</p></div></section>
+<section class="gate" id="gate"><div class="gate-in"><p>Carregando…</p></div></section>
 <div class="app" id="app" lang="pt-BR" hidden>
   <header class="top">
     <div class="mark" aria-hidden="true">GTF</div>
@@ -341,6 +356,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.10-1231"></script>
+<script type="module" src="app.js?v=2026.11.10-1456"></script>
 </body>
 </html>
