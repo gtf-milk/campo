@@ -51,12 +51,19 @@ img{max-width:100%}
 .gate-note{padding:14px;border-radius:12px;background:rgb(255 255 255 / .08)}
 .mark.big{width:64px;height:64px;font-size:20px;border-radius:18px}
 
-.gate::before{content:"";position:fixed;inset:0;background:url(contours.svg) center/cover no-repeat;pointer-events:none}
 .gate-in{position:relative}
-.hero{margin:-12px -4px 0;filter:drop-shadow(0 12px 18px rgb(0 0 0 / .4))}
-.hero svg{display:block;width:100%;height:auto;max-height:34vh}
 .gate .eyb{margin:0 0 6px;font-family:var(--f-head);font-weight:600;font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-2)}
 .gate h1{font-size:40px;line-height:1}
+
+/* abertura: foto da bezerra holandesa no topo, desbotando no verde */
+.photo-top{position:relative;margin-top:calc(-40px - env(safe-area-inset-top,0px));margin-inline:calc(-1 * max(24px,env(safe-area-inset-left,0px))) calc(-1 * max(24px,env(safe-area-inset-right,0px)));height:calc(46vh + env(safe-area-inset-top,0px));min-height:300px;max-height:520px}
+.ph-img{position:absolute;inset:0;-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}
+.ph-img img{width:100%;height:100%;object-fit:cover;object-position:30% 40%;display:block}
+.ph-img::after{content:"";position:absolute;inset:0;background:linear-gradient(rgb(12 28 18 / 0) 42%,rgb(12 28 18 / .72) 90%)}
+.photo-top .ph-ttl h1{font-size:clamp(30px,10.2vw,40px)}
+.photo-top .ph-ttl{position:absolute;left:max(24px,env(safe-area-inset-left,0px));right:max(24px,env(safe-area-inset-right,0px));bottom:4px}
+.gate h1{text-shadow:0 2px 14px rgb(0 0 0 / .35)}
+.gate .eyb{text-shadow:0 1px 8px rgb(0 0 0 / .55)}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -357,6 +364,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.10-1606"></script>
+<script type="module" src="app.js?v=2026.11.10-1629"></script>
 </body>
 </html>
