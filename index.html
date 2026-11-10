@@ -65,6 +65,18 @@ img{max-width:100%}
 .gate h1{text-shadow:0 2px 14px rgb(0 0 0 / .35)}
 .gate .eyb{text-shadow:0 1px 8px rgb(0 0 0 / .55)}
 
+/* engrenagem do topo (Admin / Conta) e lotes */
+.hbtn{display:flex;align-items:center;gap:6px;height:36px;padding:0 12px;border-radius:999px;background:rgb(255 255 255 / .10);color:var(--on-brand);font-family:var(--f-head);font-weight:600;font-size:14px;flex:none}
+.hbtn .ic{width:18px;height:18px}
+.hbtn[aria-current="page"]{background:var(--gold);color:var(--on-gold)}
+@media (max-width:419px){.hbtn{padding:0;width:36px;justify-content:center}.hbtn span{display:none}.top .mark{display:none}}
+.ricon.lote,.ricon.pesagem{background:var(--gado-bg);color:var(--gado)}
+.card.lote .card-h h3{font-size:20px}
+.card.lote .facts{margin-bottom:2px}
+.card.lote .row2{grid-template-columns:auto minmax(0,1fr)}
+.card.lote .row2 .btn{white-space:nowrap}
+@media (max-width:359px){.card.lote .row2 .btn{white-space:normal}}
+
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
 :root{
@@ -352,6 +364,7 @@ textarea.inp{min-height:84px;resize:vertical}
     <div class="mark" aria-hidden="true">GTF</div>
     <div class="ttl"><h1>Caderno de campo</h1><p>GTF Milk<span id="who"></span></p></div>
     <button class="sync" id="sync" data-act="nav" data-v="cadastros" aria-label="Situação do envio"></button>
+    <button class="hbtn" id="hb" data-act="nav" data-v="cadastros" aria-label="Conta"></button>
   </header>
   <div id="banner"></div>
   <main>
@@ -364,6 +377,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.10-1629"></script>
+<script type="module" src="app.js?v=2026.11.10-1651"></script>
 </body>
 </html>
