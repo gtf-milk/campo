@@ -77,6 +77,32 @@ img{max-width:100%}
 .card.lote .row2 .btn{white-space:nowrap}
 @media (max-width:359px){.card.lote .row2 .btn{white-space:normal}}
 
+/* pastagem | lavouras no mapa */
+.maptabs{position:absolute;top:10px;left:max(10px,env(safe-area-inset-left,0px));display:flex;gap:2px;padding:3px;border-radius:999px;background:rgb(19 37 26 / .88);z-index:2}
+.maptabs button{height:36px;padding:0 16px;border-radius:999px;color:#fff;font-family:var(--f-head);font-weight:600;font-size:15px}
+.maptabs button[aria-pressed="true"]{background:var(--gold);color:var(--on-gold)}
+.mapwrap:has(.maptabs) .legend{top:58px}
+.map[data-tab="pastagem"] .u.lav,.map[data-tab="lavoura"] .u.pas{pointer-events:none}
+.map[data-tab="pastagem"] .u.lav .uf,.map[data-tab="lavoura"] .u.pas .uf{fill-opacity:0}
+.map[data-tab="pastagem"] .u.lav .uh,.map[data-tab="lavoura"] .u.pas .uh{display:none}
+.map[data-tab="pastagem"] .u.lav .us,.map[data-tab="lavoura"] .u.pas .us{stroke-opacity:.4;stroke-width:1;stroke-dasharray:4 3}
+.map[data-tab="pastagem"] .dl{opacity:.3}
+.map[data-tab="lavoura"] .cor,.map[data-tab="lavoura"] .pl .pt{opacity:.3}
+.map .dl,.gpsl{pointer-events:none}
+.lb.plant rect{fill:#E3B21C;fill-opacity:1}
+.lb.plant text{fill:#2B2100}
+.gacc{fill:#4DABF7;fill-opacity:.18;stroke:#4DABF7;stroke-opacity:.7;stroke-width:1;vector-effect:non-scaling-stroke}
+.gh{fill:#fff}
+.gd{fill:#1C7ED6}
+.zoom button[aria-pressed="true"]{background:#1C7ED6;color:#fff}
+.ucode{width:auto;min-width:46px;padding:0 6px}
+.segrow{display:grid;gap:8px}
+@media (min-width:560px){.segrow{grid-template-columns:1fr 1fr}}
+.tabseg{margin-block:2px}
+.north{position:absolute;right:max(10px,env(safe-area-inset-right,0px));top:216px;width:44px;height:52px;border-radius:12px;background:rgb(19 37 26 / .85);display:grid;place-items:center;align-content:center;gap:0;pointer-events:none}
+.north svg{width:24px;height:24px}
+.north b{color:#fff;font-family:var(--f-head);font-size:12px;line-height:1}
+
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
 :root{
@@ -377,6 +403,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.10-1651"></script>
+<script type="module" src="app.js?v=2026.11.10-1901"></script>
 </body>
 </html>
