@@ -1,6 +1,6 @@
 /* Caderno de Campo GTF Milk: keeps the app on the phone so it opens without signal. */
-const VERSION = 'gtf-campo-2026.11.10-1505';
-const ASSETS = ["./", "./index.html", "./app.js", "./clean.jpg", "./contours.svg", "./manifest.webmanifest", "./icons/apple-touch-icon.png", "./icons/favicon-48.png", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./fonts/barlow-latin-400-normal.woff2", "./fonts/barlow-latin-500-normal.woff2", "./fonts/barlow-latin-600-normal.woff2", "./fonts/barlow-latin-700-normal.woff2", "./fonts/barlow-semi-condensed-latin-500-normal.woff2", "./fonts/barlow-semi-condensed-latin-600-normal.woff2", "./fonts/barlow-semi-condensed-latin-700-normal.woff2"];
+const VERSION = 'gtf-campo-2026.11.10-1606';
+const ASSETS = ["./", "./app.js", "./chunks/chunk-2SNLK4DW.js", "./chunks/chunk-E765PD3O.js", "./chunks/chunk-XATEI273.js", "./chunks/jspdf.es.min-FUARO66E.js", "./chunks/jspdf.plugin.autotable-3BCRFA2N.js", "./clean.jpg", "./contours.svg", "./fonts/barlow-latin-400-normal.woff2", "./fonts/barlow-latin-500-normal.woff2", "./fonts/barlow-latin-600-normal.woff2", "./fonts/barlow-latin-700-normal.woff2", "./fonts/barlow-semi-condensed-latin-500-normal.woff2", "./fonts/barlow-semi-condensed-latin-600-normal.woff2", "./fonts/barlow-semi-condensed-latin-700-normal.woff2", "./icons/apple-touch-icon.png", "./icons/favicon-48.png", "./icons/icon-192.png", "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./index.html", "./manifest.webmanifest", "./og.jpg"];
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
 });
