@@ -150,6 +150,12 @@ img{max-width:100%}
 .banner.oco .oco-bt{display:flex;gap:14px;margin-left:auto}
 .banner.oco button{color:#fff}
 .oco-st.ok b{color:#2B8A3E}.oco-st.bad b{color:#C92A2A}
+/* abas da engrenagem */
+.card.fold > .card-h{cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+.card.fold > .card-h .fold-ch{display:grid;place-items:center;width:28px;height:28px;color:var(--ink-2);transition:transform .2s}
+.card.fold:not(.closed) > .card-h .fold-ch{transform:rotate(180deg)}
+.card.fold.closed > :not(.card-h){display:none}
+.card.fold.closed > .card-h{padding-bottom:14px}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -451,6 +457,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.11-0806"></script>
+<script type="module" src="app.js?v=2026.11.11-0811"></script>
 </body>
 </html>
