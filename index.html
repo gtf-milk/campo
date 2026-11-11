@@ -156,6 +156,17 @@ img{max-width:100%}
 .card.fold:not(.closed) > .card-h .fold-ch{transform:rotate(180deg)}
 .card.fold.closed > :not(.card-h){display:none}
 .card.fold.closed > .card-h{padding-bottom:14px}
+/* lista de produtos em grupos */
+.pbusca{margin-bottom:4px}
+.pgrp{border-top:1px solid var(--line)}
+.pgrp:first-child{border-top:0}
+.pgrp > summary{display:flex;align-items:center;gap:10px;padding:14px 0;cursor:pointer;list-style:none;font-size:16px}
+.pgrp > summary::-webkit-details-marker{display:none}
+.pgrp > summary b{flex:1;min-width:0}
+.pgrp > summary .meta{color:var(--ink-2);font-size:14px}
+.pgrp > summary .fold-ch{display:grid;place-items:center;width:24px;height:24px;color:var(--ink-2);transition:transform .2s}
+.pgrp[open] > summary .fold-ch{transform:rotate(180deg)}
+.pgrp > .urow{padding-left:8px!important}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -457,6 +468,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.11-0811"></script>
+<script type="module" src="app.js?v=2026.11.11-0823"></script>
 </body>
 </html>
