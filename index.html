@@ -167,6 +167,28 @@ img{max-width:100%}
 .pgrp > summary .fold-ch{display:grid;place-items:center;width:24px;height:24px;color:var(--ink-2);transition:transform .2s}
 .pgrp[open] > summary .fold-ch{transform:rotate(180deg)}
 .pgrp > .urow{padding-left:8px!important}
+/* ocorrências pendentes */
+.ocobox{border:1px solid #F1B5B5;background:color-mix(in srgb,#C92A2A 7%,var(--surface));border-radius:12px;padding:10px 12px;display:grid;gap:6px}
+.ocobox-h{font-weight:700;color:#C92A2A;font-size:14px}
+.ocop{display:grid;gap:4px;padding:8px 0;border-top:1px solid var(--line)}
+.ocobox .ocop:first-of-type,.ocolist .card-b .ocop:first-child{border-top:0;padding-top:0}
+.ocop-t{display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:#C92A2A}
+.ocop-t b{color:var(--ink);font-size:16px}
+.ocop-d{margin-left:auto;font-size:13px;color:var(--ink-2)}
+.ocop-o{font-size:15px}
+.ocop-q{font-size:13px;color:var(--ink-2)}
+.ocop > .btn.sm{justify-self:start;margin-top:2px}
+.chip.oco{background:#C92A2A;color:#fff}
+.chip.ok{background:#D3F9D8;color:#2B8A3E}
+.ricon.resolucao{background:#D3F9D8;color:#2B8A3E}
+svg.map g.lb.oco rect{fill:#C92A2A}
+svg.map g.lb.oco text{fill:#fff}
+svg.map g.u.oco:not(.sel) .us{stroke:#FF6B6B;stroke-width:2.5}
+.nb{position:relative}
+.nbadge{position:absolute;top:2px;left:calc(50% + 6px);min-width:18px;height:18px;border-radius:9px;background:#C92A2A;color:#fff;font-size:11px;font-weight:700;display:grid;place-items:center;padding:0 5px;line-height:1}
+.ocolist > .card-h{width:100%;text-align:left;background:none;border:0;cursor:pointer}
+.ocolist h3{color:#C92A2A;display:flex;align-items:center;gap:8px}
+.ocolist .fold-ch{display:grid;place-items:center;width:28px;height:28px;color:var(--ink-2)}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -468,6 +490,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.11-0823"></script>
+<script type="module" src="app.js?v=2026.11.11-0902"></script>
 </body>
 </html>
