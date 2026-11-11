@@ -141,6 +141,15 @@ img{max-width:100%}
 .nmcard:focus-within .nmmap .zoom [data-z="rot"]{display:none}
 .nmmap{min-height:262px}
 .nmcard:focus-within .nmmap{min-height:0}
+/* aviso de ocorrência nova */
+.banner.oco{background:#C92A2A;color:#fff;align-items:flex-start;flex-wrap:wrap;row-gap:4px}
+.banner.oco .oco-ic{display:grid;place-items:center;padding-top:2px}
+.banner.oco .oco-ic svg{width:20px;height:20px}
+.banner.oco p{flex:1 1 200px}
+.banner.oco .oco-obs{display:block;opacity:.9;font-size:13px;margin-top:2px}
+.banner.oco .oco-bt{display:flex;gap:14px;margin-left:auto}
+.banner.oco button{color:#fff}
+.oco-st.ok b{color:#2B8A3E}.oco-st.bad b{color:#C92A2A}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -442,6 +451,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.11-0758"></script>
+<script type="module" src="app.js?v=2026.11.11-0806"></script>
 </body>
 </html>
