@@ -120,6 +120,22 @@ img{max-width:100%}
 .pweye{position:absolute;right:2px;top:50%;transform:translateY(-50%);width:50px;height:46px;display:grid;place-items:center;background:none;border:0;border-radius:10px;color:var(--ink-2);cursor:pointer}
 .pweye:active{background:var(--line)}
 
+/* nomes das áreas: mapa preso no topo enquanto rola a lista */
+.card.nmcard{overflow:visible}
+.nmstick{position:sticky;top:0;z-index:6;background:var(--surface);margin-inline:-16px;padding:8px 16px 10px;display:grid;gap:8px;border-bottom:1px solid var(--line)}
+.nmmap{position:relative;height:min(36vh,270px);min-height:210px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
+.nmmap .north{top:10px;right:auto;left:max(10px,env(safe-area-inset-left,0px));height:46px}
+.nmcap{display:grid;gap:2px;min-height:42px;font-size:14px;color:var(--ink-2)}
+.nmcap b{display:flex;align-items:center;gap:8px;font-size:16px;color:var(--ink)}
+.nmtag{font-family:var(--f-head);font-weight:700;font-size:13px;background:#FFD43B;color:#1F2610;border-radius:6px;padding:2px 7px}
+.nmrow{border-radius:12px;transition:background .2s}
+.nmrow.on{background:color-mix(in srgb,#FFD43B 30%,transparent);box-shadow:0 0 0 5px color-mix(in srgb,#FFD43B 30%,transparent)}
+.nmgrp.on > .field .inp{border-color:#E0B000}
+.nmcard:focus-within .nmmap{height:150px;min-height:0}
+.nmcard:focus-within .nmmap .zoom button,.nmcard:focus-within .nmmap .north{transform:scale(.8);transform-origin:top right}
+.nmcard:focus-within .nmmap .zoom{gap:0;top:4px}
+.nmcard:focus-within .nmmap .zoom [data-z="gps"],.nmcard:focus-within .nmmap .north{display:none}
+
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
 :root{
@@ -420,6 +436,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.10-2148"></script>
+<script type="module" src="app.js?v=2026.11.10-2159"></script>
 </body>
 </html>
