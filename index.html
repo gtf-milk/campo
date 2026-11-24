@@ -205,6 +205,31 @@ svg.map g.u.oco:not(.sel) .us{stroke:#FF6B6B;stroke-width:2.5}
 .fview .xbtn{position:absolute;top:max(14px,env(safe-area-inset-top,0px));right:14px;background:rgb(255 255 255 / .15);color:#fff}
 .ocop .fotos{margin:2px 0}
 
+/* pontos no mapa: ocorrência com lugar exato e pontos de água */
+.ocl .pin{cursor:pointer}
+.ocl .pin .pd{stroke:#fff;stroke-width:2.5}
+.ocl .pin.on .pd{stroke:#FFD43B;stroke-width:3.5}
+.ocl .pulse{fill:none;stroke-width:3;transform-box:fill-box;transform-origin:center;animation:pinp 1.6s ease-out infinite}
+@keyframes pinp{from{transform:scale(.5);opacity:.9}to{transform:scale(2.3);opacity:0}}
+.ocl .pacc{fill:#E03131;fill-opacity:.14;stroke:#E03131;stroke-opacity:.7;stroke-width:1.5;vector-effect:non-scaling-stroke;pointer-events:none}
+.ocl .agua .ad{fill:#1C7ED6;stroke:#fff;stroke-width:2.5}
+.ocl .agua.on .ad{stroke:#FFD43B;stroke-width:3.5}
+.ocl .aname{font:600 12px Inter,system-ui,sans-serif;fill:#fff;text-anchor:middle;paint-order:stroke;stroke:#0B2440;stroke-width:3px;stroke-linejoin:round;pointer-events:none}
+@media (prefers-reduced-motion:reduce){.ocl .pulse{animation:none;opacity:.45}}
+.urgtag{display:inline-block;padding:1px 8px;border-radius:999px;font-weight:700;font-size:12px;line-height:18px;color:#fff;white-space:nowrap;vertical-align:middle}
+.urgtag.alta{background:#E03131}.urgtag.media{background:#D9480F}.urgtag.baixa{background:#8F6F00}
+.ocop-t .urgtag{margin-right:2px}
+.ocop-m{display:inline-flex;gap:6px;align-items:center;margin:2px 0 6px}
+.onde3 .ucode{background:var(--surface-2);color:var(--ink)}
+.onde3 .dest[aria-pressed="true"] .ucode{background:var(--ok);color:#fff}
+.urgpick .ucode svg{width:20px;height:20px}
+.lgd.agtg{cursor:pointer;border:0;font:inherit;color:inherit}
+.lgd.agtg[aria-pressed="false"]{opacity:.55}
+.lgd.agtg svg{width:14px;height:14px;color:#4DABF7}
+.banner.oco.urg{background:#C92A2A}
+#pickmap{touch-action:none}
+.mapcard a.btn{text-decoration:none;white-space:nowrap}
+
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
 :root{
@@ -505,6 +530,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.23-1355"></script>
+<script type="module" src="app.js?v=2026.11.24-1351"></script>
 </body>
 </html>
