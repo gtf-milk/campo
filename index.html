@@ -239,6 +239,16 @@ svg.map g.u.oco:not(.sel) .us{stroke:#FF6B6B;stroke-width:2.5}
 .pk small{font-weight:500;opacity:.75;margin-left:4px}
 .lcat{font:600 13px var(--f-body,Inter,sans-serif);color:var(--ink-2);margin-left:6px}
 
+/* brincos */
+.brin{display:grid;gap:8px;padding:10px 0 4px;border-top:1px solid var(--line);margin-top:6px}
+.brin-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.brin-h b{display:inline-flex;gap:6px;align-items:center}
+.brin-h .link{margin-left:auto}
+.brl{display:flex;flex-wrap:wrap;gap:6px}
+.bchip{min-width:44px;min-height:36px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font:600 14px var(--f-body,Inter,sans-serif);color:var(--ink);font-variant-numeric:tabular-nums;cursor:pointer}
+.bchip[aria-pressed="true"]{background:var(--danger-bg);border-color:var(--danger);color:var(--danger)}
+.brbusca{margin:0 0 8px}
+
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
 :root{
@@ -539,6 +549,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.24-1409"></script>
+<script type="module" src="app.js?v=2026.11.24-1417"></script>
 </body>
 </html>
