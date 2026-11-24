@@ -230,6 +230,15 @@ svg.map g.u.oco:not(.sel) .us{stroke:#FF6B6B;stroke-width:2.5}
 #pickmap{touch-action:none}
 .mapcard a.btn{text-decoration:none;white-space:nowrap}
 
+/* lotes juntos */
+.qlots .qlot{display:flex;align-items:center;gap:12px;padding:10px 16px;border-top:1px solid var(--line)}
+.qlots .qlot:first-child{border-top:0}
+.qlots .qn{display:flex;align-items:center;gap:6px;flex:none}
+.qlots .qn .inp{width:88px;text-align:right}
+.qlots .qn small{color:var(--ink-2)}
+.pk small{font-weight:500;opacity:.75;margin-left:4px}
+.lcat{font:600 13px var(--f-body,Inter,sans-serif);color:var(--ink-2);margin-left:6px}
+
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
 :root{
@@ -530,6 +539,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.24-1357"></script>
+<script type="module" src="app.js?v=2026.11.24-1409"></script>
 </body>
 </html>
