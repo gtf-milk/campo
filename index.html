@@ -244,10 +244,55 @@ svg.map g.u.oco:not(.sel) .us{stroke:#FF6B6B;stroke-width:2.5}
 .brin-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .brin-h b{display:inline-flex;gap:6px;align-items:center}
 .brin-h .link{margin-left:auto}
-.brl{display:flex;flex-wrap:wrap;gap:6px}
+.brl,.bgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:6px}
+.brl>.link{grid-column:1/-1;justify-self:start}
 .bchip{min-width:44px;min-height:36px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:var(--surface);font:600 14px var(--f-body,Inter,sans-serif);color:var(--ink);font-variant-numeric:tabular-nums;cursor:pointer}
 .bchip[aria-pressed="true"]{background:var(--danger-bg);border-color:var(--danger);color:var(--danger)}
 .brbusca{margin:0 0 8px}
+/* leitor de brinco pela câmera */
+.lblrow{display:flex;align-items:baseline;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.lblrow label{margin:0}
+.scanbtn{display:inline-flex;align-items:center;gap:6px;font-weight:600;white-space:nowrap}
+.scan{position:fixed;inset:0;z-index:75;background:#0B140F;color:#fff;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.scan-h{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px max(16px,env(safe-area-inset-right,0px)) 10px max(16px,env(safe-area-inset-left,0px));font-size:1.15rem}
+.scan-h .xbtn{background:rgb(255 255 255 / .12);color:#fff}
+.scan-v{position:relative;flex:1;min-height:0;overflow:hidden;background:#000}
+.scan-v video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.scan-g{position:absolute;left:9%;right:9%;top:28%;aspect-ratio:2.3/1;border:3px solid rgb(255 255 255 / .92);border-radius:14px;box-shadow:0 0 0 100vmax rgb(0 0 0 / .32);pointer-events:none}
+.scan-hl{position:absolute;border:3px solid #FFD43B;border-radius:6px;pointer-events:none;transition:all .12s}
+.scan-s{position:absolute;left:12px;right:12px;bottom:14px;margin:auto;width:max-content;max-width:calc(100% - 24px);background:rgb(14 29 20 / .9);padding:10px 14px;border-radius:12px;font-weight:600;text-align:center;line-height:1.35}
+.scan-s.ok{background:#2B8A3E;font-size:1.25rem}
+.scan-s.err{background:#9C2B2B}
+.scan-l{padding:10px max(16px,env(safe-area-inset-right,0px)) 4px max(16px,env(safe-area-inset-left,0px));max-height:30vh;overflow:auto}
+.scan-l .hint{color:rgb(255 255 255 / .75);margin:0}
+.scan-cnt{font-weight:600;margin-bottom:6px;color:rgb(255 255 255 / .85)}
+.scan-l .bchip{display:inline-flex;align-items:center;gap:4px;background:#fff;color:#13251A}
+.scan-l .bchip.novo{background:#FFD43B}
+.scan-f{display:flex;gap:8px;padding:10px max(16px,env(safe-area-inset-right,0px)) 12px max(16px,env(safe-area-inset-left,0px))}
+.scan-f .btn{flex:1}
+.scan-f .btn.ghost{background:rgb(255 255 255 / .12);color:#fff;border-color:transparent}
+.scan-foto{cursor:pointer}
+
+/* campo de brincos: um número por vez, ou em sequência, lista em grade */
+.bred{display:grid;gap:8px}
+.bred-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.bred-row .inp{font-variant-numeric:tabular-nums;font-size:1.1rem;letter-spacing:.02em}
+.bred-tools{display:flex;flex-wrap:wrap;gap:6px 18px}
+.bred-tools .link{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.bred-faixa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:8px;align-items:end;padding:10px;border-radius:12px;background:var(--surface-2)}
+.bred-faixa label{display:grid;gap:4px;font-weight:600;font-size:.9rem}
+.bred-msg{margin:0;color:var(--ink-2)}
+.bred-cnt{display:flex;gap:10px;align-items:baseline}
+.bgrid .bchip,.brl .bchip{display:inline-flex;align-items:center;justify-content:center;gap:4px;border-radius:10px;width:100%}
+.bgrid .bchip .ic{width:14px;height:14px;opacity:.55}
+.bgrid .bchip.outro{border-color:#E8A33D;background:color-mix(in srgb,#E8A33D 18%,var(--surface))}
+.bgrid .bchip.ja{opacity:.55}
+/* ocorrência: corrigir / excluir */
+.ocop-x{display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:2px}
+.ocop-x .link{display:inline-flex;align-items:center;gap:6px;font-weight:600}
+.ocop-x .ocop-del{color:var(--danger)}
+.ocodel{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ocodel span{flex:1 1 100%;font-weight:600}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -549,6 +594,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.24-1443"></script>
+<script type="module" src="app.js?v=2026.11.24-1511"></script>
 </body>
 </html>
