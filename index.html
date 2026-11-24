@@ -330,6 +330,11 @@ svg.map g.u.oco:not(.sel) .us{stroke:#FF6B6B;stroke-width:2.5}
 .pi-g{color:#2B8A3E;font-weight:600}
 .pi-g.neg{color:#C2410C}
 .link.pi-desc{color:var(--danger);margin-top:8px}
+.pi-selh{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin:14px 0 6px}
+.pi-falta .bchip{font-size:15px;min-height:42px}
+.pi-falta .bchip.sel{background:color-mix(in srgb,var(--gold) 22%,var(--surface));border-color:var(--gold);box-shadow:0 0 0 1px var(--gold)}
+.pi-falta .bchip.feito{opacity:.6;gap:4px}
+.pi-falta .bchip.feito .ic{width:14px;height:14px;color:#2B8A3E}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -631,6 +636,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.24-1527"></script>
+<script type="module" src="app.js?v=2026.11.24-1529"></script>
 </body>
 </html>
