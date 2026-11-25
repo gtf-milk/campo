@@ -430,6 +430,11 @@ button.solo-ax{font:inherit;font-size:13px;font-weight:600;cursor:pointer;color:
 .sview img{max-width:100%;max-height:100%;cursor:zoom-in;background:#fff}
 .sview.z img{max-width:none;max-height:none;width:240%;cursor:zoom-out}
 .sv-dica{position:absolute;bottom:max(12px,env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:#fff;font-size:13px;opacity:.75;pointer-events:none}
+/* manejo do solo e análises: cor de terra */
+:root{--solo:#7A4A16;--solo-bg:#F1E4D2}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--solo:#E3B27A;--solo-bg:#3A2614}}
+:root[data-theme="dark"]{--solo:#E3B27A;--solo-bg:#3A2614}
+.ricon.manejo,.ricon.solo{background:var(--solo-bg);color:var(--solo)}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -731,6 +736,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.25-1009"></script>
+<script type="module" src="app.js?v=2026.11.25-1016"></script>
 </body>
 </html>
