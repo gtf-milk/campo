@@ -376,6 +376,15 @@ svg.map g.u.oco:not(.sel) .us{stroke:#FF6B6B;stroke-width:2.5}
 .plar{display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:4px 10px;padding:8px 12px;border-top:1px solid var(--line);font-variant-numeric:tabular-nums;align-items:baseline}
 .plar span:nth-child(2){color:var(--ink-2)}
 .plrl{display:grid;gap:2px}
+/* descrição da área */
+.card.desc .card-h h3{display:inline-flex;gap:6px;align-items:center}
+.card.desc .card-b{display:grid;gap:10px}
+.card.desc.vazia .card-b{grid-template-columns:minmax(0,1fr);justify-items:start}
+.desc-kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px}
+.desc-kv div{display:grid;gap:1px}
+.desc-kv span{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-2);font-weight:700}
+.desc-obs{margin:0;white-space:pre-wrap;line-height:1.45}
+.descall{border-top:1px solid var(--line);padding-top:10px}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -677,6 +686,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.24-2303"></script>
+<script type="module" src="app.js?v=2026.11.24-2312"></script>
 </body>
 </html>
