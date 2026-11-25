@@ -368,6 +368,14 @@ svg.map g.u.oco:not(.sel) .us{stroke:#FF6B6B;stroke-width:2.5}
 .pi-novo .link{display:inline-flex;gap:6px;align-items:center;font-weight:600}
 .pi-novobt{width:100%}
 .brnovos{justify-self:start;display:inline-flex;gap:6px;align-items:center}
+/* plantio: adubo da plantadeira e total por área */
+.pladubo{display:grid;gap:8px}
+.pladubo > .lbl{display:inline-flex;gap:6px;align-items:center}
+.plareas{display:grid;gap:0;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);margin-bottom:14px}
+.plareas > .lbl{padding:10px 12px 6px}
+.plar{display:grid;grid-template-columns:auto auto minmax(0,1fr);gap:4px 10px;padding:8px 12px;border-top:1px solid var(--line);font-variant-numeric:tabular-nums;align-items:baseline}
+.plar span:nth-child(2){color:var(--ink-2)}
+.plrl{display:grid;gap:2px}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -669,6 +677,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.24-2041"></script>
+<script type="module" src="app.js?v=2026.11.24-2303"></script>
 </body>
 </html>
