@@ -391,6 +391,45 @@ svg.map g.u.oco:not(.sel) .us{stroke:#FF6B6B;stroke-width:2.5}
 .restlist{display:flex;flex-wrap:wrap;gap:6px}
 .restrecs{max-height:220px;overflow:auto;font-size:13px;display:grid;gap:2px;font-variant-numeric:tabular-nums;border-top:1px solid var(--line);padding-top:6px}
 .plsem{display:grid;gap:8px}.plsem > .lbl{display:inline-flex;gap:6px;align-items:center}
+/* análises de solo (Administração) */
+.ricon.solo{background:var(--rest-bg);color:var(--rest)}
+.solo-g{margin-bottom:8px}
+.solo-g>.lbl{display:block;margin:6px 0 0}
+.solo-row>.ic.sm{color:var(--ink-2);flex:none}
+.solo-area{border-left:3px solid var(--line);padding:2px 0 6px 12px;margin:0 0 10px 20px;display:grid;gap:10px}
+.solo-tab{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.solo-tab table{border-collapse:collapse;font-size:13.5px;min-width:100%}
+.solo-tab th,.solo-tab td{padding:7px 10px;text-align:right;white-space:nowrap;border-top:1px solid var(--line);font-variant-numeric:tabular-nums}
+.solo-tab thead th{border-top:0;font-size:12px;color:var(--ink-2);font-weight:700;vertical-align:bottom}
+.solo-tab th small{display:block;font-weight:500}
+.solo-tab td:first-child,.solo-tab th:first-child{text-align:left;position:sticky;left:0;background:var(--surface)}
+.solo-tab td small{color:var(--ink-2)}
+.solo-tab tbody td:nth-child(2){font-weight:700}
+.solo-it{border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:grid;gap:8px;background:var(--surface)}
+.solo-ih b{display:block}
+.solo-ih span{font-size:13px;color:var(--ink-2)}
+.solo-an{display:flex;flex-wrap:wrap;gap:6px}
+.solo-ax{border:1px solid var(--line);min-height:36px;white-space:normal;text-align:left}
+button.solo-ax{font:inherit;font-size:13px;font-weight:600;cursor:pointer;color:var(--ink)}
+.solo-ax small{color:var(--ink-2);font-weight:500}
+.solo-ax .fx2{border:0;background:none;color:inherit;padding:0;margin-left:2px;display:grid;place-items:center;min-width:28px;min-height:28px;cursor:pointer}
+.solo-obs{margin:0;font-size:14px;white-space:pre-wrap}
+.solo-ac{display:flex;gap:18px}
+.solo-ac .link{display:inline-flex;align-items:center;gap:4px;min-height:36px}
+.solo-del{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px}
+.solo-del span{flex:1 1 100%}
+.solo-form .fadd{width:auto;height:auto;min-height:48px;display:flex;align-items:center;gap:8px;padding:10px 14px;font-size:14px;margin-top:8px}
+.solo-res{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-top:14px}
+.solo-res summary{font-weight:700;cursor:pointer;min-height:32px;display:list-item}
+.solo-res summary .hint{font-weight:500}
+.solo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 10px}
+@media (min-width:640px){.solo-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.sview{padding:0}
+.sview .sv-sc{width:100%;height:100%;overflow:auto;display:grid;place-items:center;padding:56px 10px 40px}
+.sview.z .sv-sc{place-items:start}
+.sview img{max-width:100%;max-height:100%;cursor:zoom-in;background:#fff}
+.sview.z img{max-width:none;max-height:none;width:240%;cursor:zoom-out}
+.sv-dica{position:absolute;bottom:max(12px,env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:#fff;font-size:13px;opacity:.75;pointer-events:none}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -692,6 +731,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.24-2330"></script>
+<script type="module" src="app.js?v=2026.11.25-1009"></script>
 </body>
 </html>
