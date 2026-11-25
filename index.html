@@ -444,6 +444,13 @@ button.solo-ax{font:inherit;font-size:13px;font-weight:600;cursor:pointer;color:
 .seg2 button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgb(0 0 0 / .12)}
 .plsafra{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;font-size:15px}
 .rl .dim{color:var(--ink-2);font-weight:500}
+/* cadastrar sementes e mudas de uma vez */
+.mudas-abre{width:100%;margin-bottom:10px}
+.newp.mudas{margin-bottom:12px;display:grid;gap:10px}
+.mu-g{display:grid;gap:6px}
+.mu-g .pick{gap:6px}
+.mu-g .pk{min-height:40px;padding:6px 12px;font-size:14px;display:inline-flex;align-items:center;gap:4px}
+.mu-g .pk[disabled]{opacity:.55;cursor:default}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -745,6 +752,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.25-1023"></script>
+<script type="module" src="app.js?v=2026.11.25-1051"></script>
 </body>
 </html>
