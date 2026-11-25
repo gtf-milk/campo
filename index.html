@@ -435,6 +435,15 @@ button.solo-ax{font:inherit;font-size:13px;font-weight:600;cursor:pointer;color:
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--solo:#E3B27A;--solo-bg:#3A2614}}
 :root[data-theme="dark"]{--solo:#E3B27A;--solo-bg:#3A2614}
 .ricon.manejo,.ricon.solo{background:var(--solo-bg);color:var(--solo)}
+/* plantio simples */
+.plsem .pick .pk small{font-weight:500;color:var(--ink-2)}
+.plsem .pk.novo{border-style:dashed;display:inline-flex;align-items:center;gap:4px;color:var(--ink-2)}
+.plsr .prow-h b{font-size:16px}
+.seg2{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--surface-2);border-radius:12px;padding:4px;margin-top:8px}
+.seg2 button{border:0;border-radius:9px;min-height:40px;font:inherit;font-weight:700;font-size:14px;background:none;color:var(--ink-2);cursor:pointer}
+.seg2 button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgb(0 0 0 / .12)}
+.plsafra{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:14px;padding:10px 14px;border:1px solid var(--line);border-radius:12px;font-size:15px}
+.rl .dim{color:var(--ink-2);font-weight:500}
 
 
 /* Layout: one-screen field app. Green header band, a working area (satellite map or list), and a bottom bar with a raised gold Registrar button. Big targets for use in the sun. */
@@ -736,6 +745,6 @@ textarea.inp{min-height:84px;resize:vertical}
 <section class="ov" id="detail" hidden aria-label="Área"></section>
 <div class="toast" id="toast" role="status" hidden></div>
 <noscript>Ative o JavaScript para usar o Caderno de Campo.</noscript>
-<script type="module" src="app.js?v=2026.11.25-1016"></script>
+<script type="module" src="app.js?v=2026.11.25-1023"></script>
 </body>
 </html>
